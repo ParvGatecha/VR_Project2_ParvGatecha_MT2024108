@@ -267,8 +267,7 @@ This project focuses on fine-tuning the ViLT model (dandelin/vilt-b32-finetuned-
    - *Loss Function:* CrossEntropyLoss
 
    - *Label preprocessing:* Converted all labels to lowercase and mapped them to integer indices
-Losses during finetuning with preprocessed case insensitive dataset:
-![alt text](image.png)
+Losses during finetuning with preprocessed case insensitive dataset
 - **Validation:**
 
    Performed exact match evaluation by comparing predicted class indices back to text labels
@@ -289,15 +288,15 @@ Losses during finetuning with preprocessed case insensitive dataset:
      - With 10000 epochs and 'query','key','value' as target modules: ~40%
    - Bert Score:
      - Bert Score was in between 0.85 to 0.95 in each scenario, which is a good score.
-      ![alt text](image-3.png)
+      ![alt text](bert_score.jpg)
    - Bart Score:
      - Bart Score was ~-5 which is reasonable it suggests that the predicted answer is somewhat off from the reference, at least in terms of what the BART model thinks is a likely paraphrase. 
      - The reason might be because the "facebook/bart-large-cnn" model might be generating 'out of vocabulary' words.
-      ![alt text](image-4.png)
+      ![alt text](bart_score.jpg)
 
    Loss showed steady decrease across epochs, suggesting effective learning
    Losses during finetuning with 'query','value','key' target modules on case insensitive dataset:
-   ![alt text](image-2.png)
+   ![alt text](loss_image.jpg)
 
 
 ### Analysis
