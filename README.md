@@ -287,15 +287,16 @@ Losses during finetuning with preprocessed case insensitive dataset
      - With 10000 epochs and 'query' & 'value' only as target modules: ~40%
      - With 10000 epochs and 'query','key','value' as target modules: ~40%
    - Bert Score:
-     - Bert Score was in between 0.85 to 0.95 in each scenario, which is a good score.
+     - Bert Score was in between 0.85 to 0.95 in each scenario, which is a good score.  
       ![alt text](bert_score.jpg)
    - Bart Score:
      - Bart Score was ~-5 which is reasonable it suggests that the predicted answer is somewhat off from the reference, at least in terms of what the BART model thinks is a likely paraphrase. 
-     - The reason might be because the "facebook/bart-large-cnn" model might be generating 'out of vocabulary' words.
+     - The reason might be because the "facebook/bart-large-cnn" model might be generating 'out of vocabulary' words.  
       ![alt text](bart_score.jpg)
 
    Loss showed steady decrease across epochs, suggesting effective learning
-   Losses during finetuning with 'query','value','key' target modules on case insensitive dataset:
+   Losses during finetuning with 'query','value','key' target modules on case insensitive dataset:  
+
    ![alt text](loss_image.jpg)
 
 
